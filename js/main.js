@@ -51,14 +51,8 @@ $(document).ready(()=>{
   $.get(`https://mcapi.us/server/status?ip=${ip}&port=${port}`, (result)=>{
     if (result.online) {
       $(".sip").html(result.players.now);
-      document.getElementById("serverstatus").classList.remove("offline");
-      document.getElementById("serverstatus").classList.remove("online");
-      document.getElementById("serverstatus").classList.add("online");
     } else {
       $(".playercount").html("Server isn't online!");
-      document.getElementById("serverstatus").classList.remove("online");
-      document.getElementById("serverstatus").classList.remove("offline");
-      document.getElementById("serverstatus").classList.add("offline");
     }
   });
 
@@ -66,14 +60,8 @@ $(document).ready(()=>{
     $.get(`https://mcapi.us/server/status?ip=${ip}&port=${port}`, (result)=>{
       if (result.online) {
         $(".sip").html(result.players.now);
-        document.getElementById("serverstatus").classList.remove("offline");
-        document.getElementById("serverstatus").classList.remove("online");
-        document.getElementById("serverstatus").classList.add("online");
       } else {
         $(".playercount").html("Server isn't online!");
-        document.getElementById("serverstatus").classList.remove("online");
-        document.getElementById("serverstatus").classList.remove("offline");
-        document.getElementById("serverstatus").classList.add("offline");
       }
     });
   }, 3000);
